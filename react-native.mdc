@@ -1,0 +1,80 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+
+## Core Architecture Rules
+1. Follow a feature, based structure - Organize code by feature modules containing components, hooks, and Redux slices
+2. Centralize state management - Use Redux Toolkit as the single source of truth for application state
+3. Layer separation - Maintain clear separation between presentation, business logic, and data layers
+
+## Component Development Rules
+1. Functional components only - Always use TypeScript-typed functional components (React.FC)
+2. Small and focused - Components should do one thing well and be easily testable
+3. Proper typing - All props must have TypeScript interfaces/types
+4. Performance first - Use React.memo for components and memoized selectors for Redux
+
+## State Management Rules
+1. Redux Toolkit patterns:
+   - Use createSlice for all reducer logic
+   - Implement typed hooks (useAppSelector/useAppDispatch)
+   - Normalize complex state shapes
+   - Prefer RTK Query for API state
+2. Action hygiene - All actions must be properly typed and use payload conventions
+3. Selector optimization - Memoize all selectors with createSelector
+
+## TypeScript Rules
+1. Strict typing - No implicit 'any' types allowed
+2. Interface vs Type:
+   - Use interfaces for public API contracts (props, actions)
+   - Use types for internal complex types
+3. Advanced typing:
+   - Use discriminated unions for reducer actions
+   - Apply utility types (Pick, Omit, Partial) appropriately
+   - Implement proper generics for reusable components
+
+## React Native Specific Rules
+1. Styled components - Use StyleSheet.create with typed styles
+2. Navigation typing - All navigation props and routes must be fully typed
+3. Performance:
+   - Always use FlatList for lists
+   - Implement windowing for large lists
+   - Optimize image loading
+4. Platform awareness - Clearly separate platform-specific code
+
+## AI-Assisted Development Rules
+1. Code generation:
+   - Auto-complete with proper TypeScript types
+   - Suggest Redux slice patterns
+   - Generate typed custom hooks
+2. Context awareness:
+   - Understand Redux store structure
+   - Recognize common React Native patterns
+   - Suggest appropriate utility types
+3. Quality control:
+   - Warn about unsafe type assertions
+   - Flag performance anti-patterns
+   - Detect untyped Redux actions
+4. Learning assistance:
+   - Explain complex TypeScript concepts
+   - Teach Redux best practices
+   - Demonstrate React Native optimizations
+
+## Folder Structure Guidance
+- Group by feature rather than by file type
+- Keep Redux store configuration centralized
+- Separate shared components from feature components
+- Maintain clear type definitions structure
+- Isolate navigation logic
+- Keep utility functions organized by purpose
+
+## Best Practices Enforcement
+1. Code consistency - Enforce consistent patterns across the codebase
+2. Testing - Suggest test file creation with components
+3. Documentation - Prompt for JSDoc comments on complex logic
+4. Refactoring - Identify opportunities to:
+   - Convert class components
+   - Extract reusable logic
+   - Normalize state
+   - Improve type safety

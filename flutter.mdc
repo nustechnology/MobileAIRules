@@ -1,0 +1,112 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+## Adaptive Architecture Rules
+1. Respect existing structure - Adapt to the project's current organization while suggesting improvements
+2. Clean architecture principles - Guide toward layered architecture (data/domain/presentation)
+3. Feature modularity - Encourage feature-based organization when appropriate
+4. Consistency first - Maintain existing patterns unless there's clear benefit to change
+
+## BLoC State Management Rules
+1. Proper BLoC implementation:
+   - Suggest event/state patterns
+   - Guide toward single responsibility BLoCs
+   - Recommend proper state immutability
+2. Efficient state updates:
+   - Prevent unnecessary rebuilds
+   - Suggest debouncing for rapid events
+   - Guide toward proper state decomposition
+3. Stream hygiene:
+   - Ensure proper stream disposal
+   - Recommend async best practices
+   - Prevent stream leaks
+
+## Widget Development Rules
+1. Composition over inheritance:
+   - Suggest breaking down complex widgets
+   - Guide toward reusable components
+   - Recommend custom widget libraries
+2. Performance optimization:
+   - Flag potential rebuild issues
+   - Suggest const constructors
+   - Recommend proper keys usage
+3. Accessibility:
+   - Remind about semantic labels
+   - Suggest proper contrast ratios
+   - Guide toward screen reader support
+
+## Code Quality Rules
+1. Null safety:
+   - Enforce sound null safety
+   - Suggest proper null handling
+   - Flag unsafe null assertions
+2. Type safety:
+   - Recommend strong typing
+   - Suggest proper type aliases
+   - Guide toward sealed classes for state
+3. Error handling:
+   - Recommend Either pattern
+   - Suggest proper error boundaries
+   - Guide toward meaningful error messages
+
+## Dependency Injection Rules
+1. GetIt patterns:
+   - Suggest proper service registration
+   - Guide toward scoped dependencies
+   - Recommend testable DI patterns
+2. Service location:
+   - Prevent direct service access in widgets
+   - Suggest proper dependency passing
+   - Guide toward testable architecture
+
+## Testing Guidance Rules
+1. Test generation:
+   - Suggest missing test files
+   - Generate test stubs
+   - Recommend test cases
+2. Mocking strategies:
+   - Suggest mock implementations
+   - Guide toward golden tests
+   - Recommend widget test best practices
+3. Coverage awareness:
+   - Highlight untested logic
+   - Suggest critical test cases
+   - Guide toward meaningful assertions
+
+## Performance Optimization Rules
+1. Build optimization:
+   - Flag expensive rebuilds
+   - Suggest const widgets
+   - Recommend repaint boundaries
+2. Memory management:
+   - Detect potential leaks
+   - Suggest proper disposal
+   - Guide toward efficient image handling
+3. List optimization:
+   - Recommend lazy loading
+   - Suggest proper list views
+   - Guide toward item builders
+
+## Platform Adaptation Rules
+1. Platform awareness:
+   - Suggest platform-specific adaptations
+   - Guide toward proper platform channels
+   - Recommend adaptive widgets
+2. Material 3 guidance:
+   - Suggest modern design components
+   - Guide toward theming best practices
+   - Recommend dynamic color schemes
+
+## Localization Rules
+1. l10n support:
+   - Suggest missing translations
+   - Guide toward ARB file patterns
+   - Recommend context-aware localization
+2. Internationalization:
+   - Flag hardcoded strings
+   - Suggest proper date/number formatting
+   - Guide toward RTL support
+
